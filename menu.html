@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperStar Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Banner Image Styling */
+        .menu-banner-img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .menu-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .menu-section {
+            border: 1px solid #000;
+            padding: 30px;
+            margin-top: -50px; /* Slight overlap with banner like some modern designs */
+            background-color: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        .nav-pills .nav-link {
+            border-radius: 50px;
+            padding: 10px 30px;
+            margin: 5px;
+            background-color: #c4c4c4;
+            border: none;
+            color: #000;
+        }
+
+        .nav-pills .nav-link.active {
+            background-color: #0d6efd;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">SuperStar Restaurant</a>
+                <div class="navbar-nav">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="about.html">About us</a>
+                    <a class="nav-link active" href="menu.html">Menu</a>
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                    <a class="nav-link" href="contact.html">Contact us</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container-fluid p-0">
+        <img src="image/menubanner.jpg" alt="Our Delicious Menu" class="menu-banner-img">
+    </section>
+
+    <main class="container mb-5">
+        <div class="menu-section shadow-sm">
+            <h2 class="text-center mb-4">Our Menu</h2>
+            
+            <ul class="nav nav-pills justify-content-center mb-5" id="menuTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="burger-tab" data-bs-toggle="pill" data-bs-target="#burgers" type="button" role="tab">Burgers</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="sides-tab" data-bs-toggle="pill" data-bs-target="#sides" type="button" role="tab">Sides</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="drinks-tab" data-bs-toggle="pill" data-bs-target="#drinks" type="button" role="tab">Drinks</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="combos-tab" data-bs-toggle="pill" data-bs-target="#combos" type="button" role="tab">Combos</button>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="menuTabsContent">
+                
+                <div class="tab-pane fade show active" id="burgers" role="tabpanel">
+                    <div class="row text-center">
+                        <div class="col-md-4 mb-4"><img src="image/burger2.jpg" class="menu-img mb-2"><h5>SuperStar Burger</h5><p class="fw-bold">P 55</p></div>
+                        <div class="col-md-4 mb-4"><img src="image/doubletrouble.jpg" class="menu-img mb-2"><h5>Double Trouble</h5><p class="fw-bold">P 75</p></div>
+                        <div class="col-md-4 mb-4"><img src="image/chickencrunch2.avif" class="menu-img mb-2"><h5>Chicken Crunch</h5><p class="fw-bold">P 60</p></div>
+                        <div class="col-md-4 mb-4"><img src="image/veggieburger.avif" class="menu-img mb-2"><h5>Veggie Delight</h5><p class="fw-bold">P 50</p></div>
+                        <div class="col-md-4 mb-4"><img src="image/bbqburger.avif" class="menu-img mb-2"><h5>BBQ Bacon</h5><p class="fw-bold">P 65</p></div>
+                        <div class="col-md-4 mb-4"><img src="image/spicy-zinger.jpg" class="menu-img mb-2"><h5>Spicy Zinger</h5><p class="fw-bold">P 58</p></div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="sides" role="tabpanel">
+                    <div class="row text-center">
+                        <div class="col-md-4 mb-4"><img src="image/seasonedfries.avif" class="menu-img mb-2"><h5>Seasoned Fries</h5><p>P 25</p></div>
+                        <div class="col-md-4 mb-4"><img src="image/onionring.avif" class="menu-img mb-2"><h5>Onion Rings</h5><p>P 28</p></div>
+                        <div class="col-md-4 mb-4"><img src="image/coleslaw cup.jpg" class="menu-img mb-2"><h5>Coleslaw Cup</h5><p>P 20</p></div>
+                        <div class="col-md-4 mb-4"><img src="image/loadedfries.avif" class="menu-img mb-2"><h5>Loaded Fries</h5><p>P 38</p></div>
+                        <div class="col-md-4 mb-4"><img src="image/garlicbread.avif" class="menu-img mb-2"><h5>Garlic Bread</h5><p>P 30</p></div>
+                        <div class="col-md-4 mb-4"><img src="image/mozzerallasticks.avif" class="menu-img mb-2"><h5>Mozzarella Sticks</h5><p>P 45</p></div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="drinks" role="tabpanel">
+                    <div class="row text-center">
+                        <div class="col-md-4 mb-4"><img src="image/lemonade.jpg" class="menu-img mb-2"><h5>Lemonade</h5><p>P 22</p></div>
+                        <div class="col-md-4 mb-4"><img src="image/milkshake2.avif" class="menu-img mb-2"><h5>Super Star Shake</h5><p>P 35</p></div>
+                        <div class="col-md-4 mb-4"><img src="image/softdrink.jpg" class="menu-img mb-2"><h5>Soft Drinks</h5><p>P 15</p></div>
+                        <div class="col-md-4 mb-4"><img src="image/bottledwater.avif" class="menu-img mb-2"><h5>Bottled Water</h5><p>P 10</p></div>
+                        <div class="col-md-4 mb-4"><img src="image/icetea.avif" class="menu-img mb-2"><h5>Iced Tea</h5><p>P 20</p></div>
+                        <div class="col-md-4 mb-4"><img src="image/orangejuice.avif" class="menu-img mb-2"><h5>Orange Juice</h5><p>P 25</p></div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="combos" role="tabpanel">
+                    <div class="row text-center">
+                        <div class="col-md-4 mb-4"><img src="image/classiccombo.jpg" class="menu-img mb-2"><h5>Classic Combo</h5><p>P 80</p></div>
+                        <div class="col-md-4 mb-4"><img src="image/meal-deal.jpg" class="menu-img mb-2"><h5>Super Star Deal</h5><p>P 110</p></div>
+                        <div class="col-md-4 mb-4"><img src="image/snack-attack.jpg" class="menu-img mb-2"><h5>Snack Attack</h5><p>P 95</p></div>
+                        <div class="col-md-4 mb-4"><img src="image/familyfeast.avif" class="menu-img mb-2"><h5>Family Feast</h5><p>P 280</p></div>
+                        <div class="col-md-4 mb-4"><img src="image/couple-deal.jpg" class="menu-img mb-2"><h5>Couple Deal</h5><p>P 150</p></div>
+                        <div class="col-md-4 mb-4"><img src="image/breakfastcombo.jpg" class="menu-img mb-2"><h5>Breakfast Combo</h5><p>P 70</p></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center py-3 bg-dark text-white">
+        <p class="mb-0">Copyright &copy; 2026 Super Star Restaurant. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
