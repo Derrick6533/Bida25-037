@@ -3,135 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SuperStar AboutUs</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .about-banner {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            background-color: #555;
-        }
-        .content-box {
-            border: 1px solid #000;
-            padding: 30px;
-            margin-bottom: 20px;
-            background-color: #fff;
-        }
-        .value-card, .team-card {
-            background-color: #e0e0e0; /* Light gray from wireframe */
-            padding: 20px;
-            height: 100%;
-            border-radius: 4px;
-        }
-        /* Circular image styling for team members */
-        .team-img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background-color: #999;
-            object-fit: cover;
-        }
-    </style>
+    <title>SuperStar About Us</title>
+   <link rel="stylesheet" href="style.css">
+
+<style>
+    .value-card { 
+        background-color: #e0e0e0; 
+    }
+    
+    .team-card { 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        gap: 15px; 
+    }
+    
+    .team-img { 
+        border-radius: 50%; 
+        background-color: #999; 
+    }
+    
+    .role-title { 
+        color: #6c757d; 
+        font-size: 0.9rem; 
+    }
+    
+    .story-layout {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+        align-items: center;
+    }
+    
+    .story-img { 
+        width: 100%; 
+        max-width: 100%; 
+        object-fit: cover; 
+        border-radius: 8px; 
+    }
+</style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">SuperStar</a>
-            <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="index.html">Home</a>
-                <a class="nav-link active" href="about.html">About us</a>
-                <a class="nav-link" href="menu.html">Menu</a>
-                <a class="nav-link" href="gallery.html">Gallery</a>
-                <a class="nav-link" href="contact.html">Contact us</a>
-            </div>
+    <header class="main-header">
+        <nav class="custom-navbar">
+        <a class="nav-brand" href="index.html">SuperStar Restaurant</a>
+        <button class="nav-toggle" id="navToggle" aria-label="toggle navigation">
+         <span class="hamburger"></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link active" href="about.html">About Us</a></li>
+        <li><a class="nav-link" href="menu.html">Menu</a></li>
+        <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <main class="content-wrapper">
+        <section class="content-box">
+        <h2 class="section-title">Our Story</h2>
+        <div class="story-layout">
+        <figure class="story-figure">
+        <img src="image/homebanner.avif" class="story-img" alt="Our Restaurant Journey" width="500" height="350">
+        </figure>
+        <article class="story-text">
+        <p>Welcome to SuperStar Restaurant, where culinary passion meets exceptional service. Established with a vision to bring fresh, flavorful, and innovative dishes to Gaborone, we pride ourselves on sourcing the finest local ingredients to create memorable dining experiences.</p>
+        <br>
+        <p>Our team of dedicated chefs constantly pushes boundaries to deliver a diverse menu that satisfies every palate. From classic favorites to contemporary creations, every plate tells a story of tradition, taste, and excellence.</p>
+        </article>
         </div>
-    </nav>
+        </section>
 
-    <div class="container-fluid p-0 mb-5">
-        <img src="homebanner.avif" alt="About SuperStar Banner" class="about-banner">
-    </div>
+    <section>
+        <h2 class="section-title">Our Core Values</h2>
+        <div class="values-grid">
+        <div class="value-card">
+        <h3>Quality Ingredients</h3>
+        <p>We never compromise on freshness. Every dish is crafted using premium, carefully selected products.</p>
+        </div>
+        <div class="value-card">
+        <h3>Guest First</h3>
+        <p>Our customers are at the heart of everything we do. We strive to provide an atmosphere that feels like home.</p>
+        </div>
+        <div class="value-card">
+        <h3>Culinary Innovation</h3>
+        <p>We blend traditional techniques with modern culinary trends to keep our menus exciting and vibrant.</p>
+        </div>
+        </div>
+    </section>
 
-    <main class="container mb-5">
+    <section>
+        <h2 class="section-title">Meet the Team</h2>
+        <div class="team-grid">
         
-        <div class="content-box">
-            <h2 class="text-center mb-4">About SuperStar Restaurant</h2>
-            <div class="row align-items-center">
-                <div class="col-md-5">
-                    <img src="restaurant-story.jpg" class="img-fluid rounded" alt="Restaurant Story Image">
-                </div>
-                <div class="col-md-7">
-                    <h5>Story:</h5>
-                    <p>Super Star Restaurant was founded with a passion for serving fresh, affordable and delicious meals to the people of Gaborone.</p>
-                    <p>We take pride in our locally sourced ingredients and friendly service. Every dish is prepared with care and dedication to quality.</p>
-                </div>
-            </div>
+        <div class="team-card">
+        <img src="image/assistantchef.avif" class="team-img" alt="Head Chef" width="100" height="300">
+        <h3>Chef Thabo</h3>
+        <span class="role-title">Head Chef</span>
         </div>
-
-        <div class="content-box">
-            <h2 class="text-center mb-4">Our Value</h2>
-            <div class="row g-3">
-                <div class="col-md-4">
-                    <div class="value-card">
-                        <h5 class="border-bottom border-dark pb-2">Fresh Ingredients</h5>
-                        <p>We ensure that we always use fresh ingredients to make delicious meals for our customers.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="value-card">
-                        <h5 class="border-bottom border-dark pb-2">Community First</h5>
-                        <p>Proudly based in Gaborone and committed to giving back through local employment and support.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="value-card">
-                        <h5 class="border-bottom border-dark pb-2">Customer Satisfaction</h5>
-                        <p>Your satisfaction is our priority. We go the extra mile to make every visit memorable.</p>
-                    </div>
-                </div>
-            </div>
+        
+        <div class="team-card">
+        <img src="image/chef.avif" class="team-img" alt="Assistant chef" width="100" height="300">
+        <h3>Chef Neo</h3>
+        <span class="role-title">Assistant Chef</span>
         </div>
-
-        <div class="content-box">
-            <h2 class="text-center mb-4">Meet The Team</h2>
-            <div class="row g-3">
-                <div class="col-md-4">
-                    <div class="team-card d-flex align-items-center">
-                        <img src="manager.avif" class="team-img me-3" alt="Team Member">
-                        <div>
-                            <h5 class="mb-0">Team Member</h5>
-                            <small class="text-muted">Role/Title</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="team-card d-flex align-items-center">
-                        <img src="chef.avif" class="team-img me-3" alt="Team Member">
-                        <div>
-                            <h5 class="mb-0">Team Member</h5>
-                            <small class="text-muted">Role/Title</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="team-card d-flex align-items-center">
-                        <img src="assistantchef.avif" class="team-img me-3" alt="Team Member">
-                        <div>
-                            <h5 class="mb-0">Team Member</h5>
-                            <small class="text-muted">Role/Title</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        
+        <div class="team-card">
+        <img src="image/manager.avif" class="team-img" alt="Restaurant Manager" width="100" height="300">
+        <h3>Sarah G.</h3>
+        <span class="role-title">General Manager</span>
         </div>
+        </div>
+    </section>
     </main>
 
-    <footer class="text-center py-3 bg-dark text-white">
-        <p class="mb-0">Copyright &copy; 2026 Super Star Restaurant. All Rights Reserved.</p>
+    <footer class="main-footer">
+        <p>Copyright &copy; 2026 Super Star Restaurant. All Rights Reserved.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
+
+    
