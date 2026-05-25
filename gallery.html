@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperStar Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    
+<style>
+    .gallery-section {
+        background: #fff;
+        padding: 40px;
+        border-radius: 8px;
+        border: 1px solid #dee2e6;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        position: relative;
+        z-index: 2;
+    }
+    
+    .gallery-filter-nav {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+    
+    .filter-btn {
+        border-radius: 50px;
+        padding: 10px 25px;
+        background-color: #e9ecef;
+        border: none;
+        cursor: pointer;
+        font-weight: 500;
+        transition: all 0.2s;
+    }
+    
+    .filter-btn.active {
+        background-color: darkblue;
+        color: #fff;
+    }
+    
+    .filter-btn:hover:hover {
+        background-color: lightskyblue;
+        color: white;
+    }
+    .gallery-pane { 
+        display: none; 
+    }
+    
+    .gallery-pane.active { 
+        display: block; 
+    }
+
+    /* Interactive Hover Effect for Photos */
+    .gallery-img { 
+        transition: transform 0.3s ease; 
+    }
+    
+    .gallery-img:hover {
+        transform: scale(1.03);
+    }
+
+    @media (max-width: 768px) {
+        .gallery-filter-nav { 
+            flex-wrap: wrap; 
+        }
+    }
+</style>
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="custom-navbar">
+        <a class="nav-brand" href="index.html">SuperStar Restaurant</a>
+        <button class="nav-toggle" id="navToggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="about.html">About Us</a></li>
+        <li><a class="nav-link" href="menu.html">Menu</a></li>
+        <li><a class="nav-link active" href="gallery.html">Gallery</a></li>
+        <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <main class="content-wrapper">
+        <section class="gallery-section shadow-sm">
+        <h2 class="section-title">Our Gallery</h2>
+            
+    <nav class="gallery-filter-nav">
+        <button class="filter-btn active" data-target="all">ALL</button>
+        <button class="filter-btn" data-target="food">Food</button>
+        <button class="filter-btn" data-target="interior">Interior</button>
+        <button class="filter-btn" data-target="events">Event</button>
+    </nav>
+
+    <section class="gallery-panes-container">
+                
+        <section class="gallery-pane active" id="all">
+            <section class="gallery-grid">
+        <figure class="gallery-item"><img src="image/classiccombo.jpg" class="gallery-img" alt="Food Item" width="380" height="250"></figure>
+        <figure class="gallery-item"><img src="image/interior.avif" class="gallery-img" alt="Restaurant Interior" width="380" height="250"></figure>
+        <figure class="gallery-item"><img src="image/event.jpg" class="gallery-img" alt="Special Event" width="380" height="250"></figure>
+        <figure class="gallery-item"><img src="image/burger2.jpg" class="gallery-img" alt="Burger Dish" width="380" height="250"></figure>
+        <figure class="gallery-item"><img src="image/interior2.jpg" class="gallery-img" alt="Restaurant Dinning Area" width="380" height="250"></figure>
+        <figure class="gallery-item"><img src="image/team.jpg" class="gallery-img" alt="SuperStar Team" width="380" height="250"></figure>
+            </section>
+    </section>
+
+    <section class="gallery-pane" id="food">
+         <section class="gallery-grid">
+        <figure class="gallery-item"><img src="image/breakfastcombo.jpg" class="gallery-img" alt="Breakfast Dish" width="380" height="250"></figure>
+        <figure class="gallery-item"><img src="image/classiccombo.jpg" class="gallery-img" alt="Classic Combo Platter" width="380" height="250"></figure>
+        <figure class="gallery-item"><img src="image/doubletrouble.jpg" class="gallery-img" alt="Double Stacked Burger" width="380" height="250"></figure>
+        <figure class="gallery-item"><img src="image/loadedfries.avif" class="gallery-img" alt="Basket of Loaded Fries" width="380" height="250"></figure>
+        </section>
+    </section>
+
+    <section class="gallery-pane" id="interior">
+            <section class="gallery-grid">
+        <figure class="gallery-item"><img src="image/interior.avif" class="gallery-img" alt="Front Counter Area" width="380" height="250"></figure>
+        <figure class="gallery-item"><img src="image/interior2.jpg" class="gallery-img" alt="Booth Seating" width="380" height="250"></figure>
+        </section>
+            </section>
+
+    <section class="gallery-pane" id="events">
+            <section class="gallery-grid">
+        <figure class="gallery-item"><img src="image/event.jpg" class="gallery-img" alt="Catering Event Setup" width="380" height="250"></figure>
+        <figure class="gallery-item"><img src="image/evnt2.avif" class="gallery-img" alt="Birthday Celebration Setup" width="380" height="250"></figure>
+            </section>
+        </section>
+
+    </section>
+</section>
+</main>
+
+<footer class="main-footer">
+        <p>Copyright &copy; 2026 Super Star Restaurant. All Rights Reserved.</p>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
